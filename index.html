@@ -44,58 +44,70 @@
     .btn-donate { background-color: var(--accent); color: var(--white) !important; padding: 0.5rem 1.25rem; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
     .btn-donate:hover { background-color: #b45309; }
 
-    /* Hero Section */
-    
-    /* Hero Section */
-    .hero { 
-      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-      color: var(--white); 
-      padding: 1.5rem 0 3rem 0; /* Reduced top padding from 4rem to 1.5rem */
-      text-align: center; 
-    }
-    
-    .hero-container {
-      max-width: 1100px; /* Matches the nav-container width for alignment */
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+  /* Hero Container Layout */
+.hero {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
-    .hero-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-    }
+/* White Top Area for Images */
+.hero-top-wrapper {
+  background-color: var(--white, #ffffff);
+  width: 100%;
+  padding: 2rem 1.5rem;
+}
 
-    .hero-headshot {
-      width: 150px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 3px solid var(--white);
-    }
+.hero-top-row {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
 
-    .hero-yard-sign {
-      max-width: 180px;
-      height: auto;
-      border-radius: 6px;
-    }
+/* Headshot Styling */
+.hero-headshot {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
-    .hero-content { 
-      max-width: 800px; 
-      margin: 0 auto; 
-    }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero p.subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.5rem; }
-    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--white); color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
-    .btn-secondary { border: 2px solid var(--white); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
-    .hero-img-placeholder { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--white); margin: 0 auto 1.5rem auto; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--gray); font-weight: bold; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero p.subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.5rem; }
-    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--white); color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
-    .btn-secondary { border: 2px solid var(--white); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
+/* Responsive Yard Sign (Spreads and Fills Available Space) */
+.hero-yard-sign {
+  width: 100%;
+  max-width: 520px; /* Expands to take up more space */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Blue Bottom Area for Main Content */
+.hero-blue-banner {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); /* Primary Blue Gradient */
+  color: #ffffff;
+  padding: 3.5rem 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-top-row {
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-yard-sign {
+    max-width: 100%;
+  }
+}
 
     /* Section Styling */
     section { padding: 4rem 1.5rem; max-width: 1100px; margin: 0 auto; }
@@ -215,33 +227,119 @@
   </header>
 
 
-  <!-- Hero Section -->
-  <section class="hero" style="max-width: 100%;">
-    <div class="hero-container">
+<!-- Hero Section -->
+<section class="hero" style="width: 100%; max-width: 100%;">
+  
+  <!-- White Top Container (Images Row) -->
+  <div class="hero-top-wrapper">
+    <div class="hero-top-row">
+      <img src="images/Linda-headshot.JPG" alt="Linda Jimeian" class="hero-headshot">
+      <img src="images/YardSign2.png" alt="Linda Jimeian City Council Yard Sign" class="hero-yard-sign">
+    </div>
+  </div>
+
+  <!-- Blue Bottom Banner (Text & Buttons) -->
+  <div class="hero-blue-banner">
+    <div class="hero-content">
+      <h1>Strong Leadership. Fiscal Responsibility. Protecting Our Future.</h1>
+      <p class="subtitle">A dedicated leader working to keep Indian Harbour Beach safe, vibrant, and thriving for all residents.</p>
+
+      <div class="hero-buttons">
+        <a href="#contribute" class="btn-primary">Contribute Today</a>
+        <a href="#get-involved" class="btn-secondary">Request a Yard Sign</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+ <!-- About Linda Section -->
+<section id="about">
+  <h2 class="section-title">Meet Linda Jimeian</h2>
+  
+  <div class="about-container" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
+    
+    <!-- Headshot Image -->
+    <div class="about-image" style="text-align: center;">
+      <img src="images/Linda-headshot.JPG" alt="Linda Jimeian" style="width: 100%; max-width: 320px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+
+    <!-- Bio Content -->
+    <div class="about-content" style="font-size: 1.05rem; line-height: 1.6; color: var(--dark);">
       
-      <!-- Top Row: Headshot aligned left with header text; Yard Sign aligned right -->
-      <div class="hero-top-row">
-        <img src="images/linda-headshot.jpg" alt="Linda Jimeian" class="hero-headshot">
-        <img src="images/linda yard sign logo chopped.png" alt="Linda Jimeian City Council Yard Sign" class="hero-yard-sign">
+      <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.75rem;">Raised Here. Ready to Serve.</h3>
+      
+      <p style="margin-bottom: 1rem;">
+        Linda grew up in Indian Harbour Beach and Satellite Beach, attending Ocean Breeze Elementary and Satellite High School before graduating from Florida State University. This community shaped her values, and it has always been home.
+      </p>
+
+      <p style="margin-bottom: 1rem;">
+        After a successful career in business development, marketing, and community engagement, Linda returned home in 2001 to give back to the community she loves. In 2010, she began serving at Patrick Space Force Base, where she built strategic partnerships between local businesses and the military community.
+      </p>
+
+      <p style="margin-bottom: 1.5rem;">
+        Her career has been defined by bringing people together, strengthening organizations, and creating opportunities that improve the lives of individuals and families across Brevard County. Today, Linda continues that commitment as a member of the Indian Harbour Beach Planning and Zoning Board, where she works to support thoughtful planning, responsible growth, and decisions that preserve the character of our city.
+      </p>
+
+      <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 1.5rem 0;">
+
+      <h3 style="color: var(--primary); font-size: 1.35rem; margin-bottom: 0.75rem;">Why I'm Running</h3>
+      
+      <p style="margin-bottom: 1rem;">
+        Indian Harbour Beach has given so much to me throughout my life. I am running for City Council because I believe it is time to give back by serving our residents with integrity, transparency, and accountability.
+      </p>
+
+      <p style="margin-bottom: 1rem;">
+        I believe City Council should listen first, make decisions based on facts, protect taxpayer dollars, and always put the interests of our residents first. My goal is to preserve the hometown values we cherish while thoughtfully planning for the future of our community.
+      </p>
+
+      <p style="margin-bottom: 1.5rem;">
+        I want every resident to know that their voice matters. I will be accessible, approachable, and committed to working collaboratively to make decisions that strengthen our city today and for generations to come.
+      </p>
+
+      <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 1.5rem 0;">
+
+      <h3 style="color: var(--primary); font-size: 1.35rem; margin-bottom: 0.75rem;">My Priorities</h3>
+      
+      <ul style="list-style-type: none; padding-left: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin-bottom: 1.5rem; font-weight: 600; color: var(--secondary);">
+        <li>✓ Transparent Leadership</li>
+        <li>✓ Fiscal Responsibility</li>
+        <li>✓ Public Safety</li>
+        <li>✓ Supporting Local Businesses</li>
+        <li>✓ Protecting Our Beaches, Parks & Lagoon</li>
+        <li>✓ Preserving Our Quality of Life</li>
+      </ul>
+
+      <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 1.5rem 0;">
+
+      <h3 style="color: var(--primary); font-size: 1.35rem; margin-bottom: 0.75rem;">My Experience & Community Leadership</h3>
+      
+      <ul style="padding-left: 1.25rem; margin-bottom: 1.5rem;">
+        <li><strong>Current Board Member:</strong> Indian Harbour Beach Planning & Zoning Board</li>
+        <li><strong>Former Board Member:</strong> Brevard County Commission on Aging</li>
+        <li><strong>Commercial Sponsorship Coordinator:</strong> Patrick Space Force Base (recognized for building partnerships and bringing organizations together to improve our community)</li>
+        <li><strong>Community Impact Manager:</strong> United Way Space Coast</li>
+        <li>Love INC committee service & volunteer</li>
+        <li>Community Engagement & Partnership Development</li>
+        <li>Business Development & Marketing</li>
+        <li>Workforce Development</li>
+        <li>Fundraising & Grant Support</li>
+        <li>Case Management & Human Services</li>
+      </ul>
+
+      <div style="background-color: #f1f5f9; padding: 1.25rem; border-radius: 8px; border-left: 4px solid var(--primary); margin-top: 1.5rem;">
+        <h4 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Together We Can Keep Indian Harbour Beach Strong</h4>
+        <p style="margin-bottom: 0;">
+          I would be honored to earn your trust, your support, and your vote for <strong>Indian Harbour Beach City Council Seat 1</strong>.
+        </p>
       </div>
 
-      <!-- Main Banner Text & Buttons -->
-      <div class="hero-content">
-        <h1>Strong Leadership. Fiscal Responsibility. Protecting Our Future.</h1>
-        <p class="subtitle">A dedicated leader working to keep Indian Harbour Beach safe, vibrant, and thriving for all residents.</p>
-
-        <div class="hero-buttons">
-            <a href="#contribute" class="btn-primary">Contribute Today</a>
-            <a href="#get-involved" class="btn-secondary">Request a Yard Sign</a>
-        </div>
-
-
-
-    
     </div>
+  </div>
+</section>
 
-    </div>
-  </section>
 
   <!-- Priority Pillars -->
   <section id="pillars">
@@ -262,18 +360,7 @@
     </div>
   </section>
 
-  <!-- About Linda Bio Section -->
-  <section id="about">
-    <h2 class="section-title">Meet Linda Jimeian</h2>
-    <div class="bio-container">
-      <p><strong>Linda Jimeian</strong> is a dedicated community leader with a passion for public service and building strong, connected communities. Throughout her career, she has worked across the nonprofit, business, and public sectors, bringing people together to solve problems, build partnerships, and improve the lives of others.</p>
-      <p>Linda's professional experience includes community engagement, workforce development, business development, fundraising, marketing, and case management. She has collaborated with local businesses, government agencies, faith-based organizations, and community partners to develop innovative solutions, secure resources, and strengthen community programs. Her work has focused on helping individuals and families achieve stability while supporting initiatives that enhance the quality of life for the entire community.</p>
-      <p>Committed to servant leadership, Linda currently serves on the <strong>Planning and Zoning Board</strong>, where she works to promote thoughtful growth, responsible planning, and decisions that protect the character of the community while preparing for its future.</p>
-      <p>Linda believes effective leadership begins with listening. She is committed to transparency, fiscal responsibility, public safety, and supporting local businesses while ensuring residents have a strong voice in the decisions that shape their city.</p>
-      <p>Linda is honored to seek the opportunity to serve on the City Council and is dedicated to working collaboratively to build a safe, vibrant, and thriving community for all residents.</p>
-    </div>
-  </section>
-
+  
 <!-- Get Involved / Request Section -->
   <section id="get-involved">
     <h2 class="section-title">Request a Yard Sign or Get Involved</h2>
