@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linda Jimeian | Candidate for Indian Harbour Beach City Council, Seat 1</title>
+  <style>
+    :root {
+      --primary: #1e3a8a; /* Deep Navy */
+      --secondary: #0284c7; /* Ocean Blue */
+      --accent: #d97706; /* Warm Amber */
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --gray: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background-color: var(--light); }
+    a { text-decoration: none; color: inherit; }
+
+    /* Enable smooth scrolling across the page */
+    html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Offsets scroll position by the height of the sticky header */
+    }
+
+    /* Add scroll margin to every section as a fallback */
+    section {
+    padding: 4rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    scroll-margin-top: 90px; /* Prevents headings from hiding behind the header */
+    }
+
+    /* Header & Navigation */
+    header { background: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .logo { font-size: 1.25rem; font-weight: bold; color: var(--primary); }
+    .logo span { color: var(--secondary); display: block; font-size: 0.85rem; font-weight: normal; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; list-style: none; }
+    .nav-links a { font-weight: 600; color: var(--dark); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--secondary); }
+    .btn-donate { background-color: var(--accent); color: var(--white) !important; padding: 0.5rem 1.25rem; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
+    .btn-donate:hover { background-color: #b45309; }
+
+    /* Hero Section */
+    
+    /* Hero Section */
+    .hero { 
+      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+      color: var(--white); 
+      padding: 1.5rem 0 3rem 0; /* Reduced top padding from 4rem to 1.5rem */
+      text-align: center; 
+    }
+    
+    .hero-container {
+      max-width: 1100px; /* Matches the nav-container width for alignment */
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-headshot {
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 3px solid var(--white);
+    }
+
+    .hero-yard-sign {
+      max-width: 180px;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .hero-content { 
+      max-width: 800px; 
+      margin: 0 auto; 
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .hero p.subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.5rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--white); color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
+    .btn-secondary { border: 2px solid var(--white); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
+    .hero-img-placeholder { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--white); margin: 0 auto 1.5rem auto; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--gray); font-weight: bold; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .hero p.subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 1.5rem; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: var(--white); color: var(--primary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
+    .btn-secondary { border: 2px solid var(--white); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; }
+
+    /* Section Styling */
+    section { padding: 4rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .section-title { text-align: center; font-size: 2rem; color: var(--primary); margin-bottom: 2.5rem; }
+
+    /* Pillars Grid */
+    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .pillar-card { background: var(--white); padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .pillar-card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
+
+    /* Bio Section */
+    .bio-container { background: var(--white); padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.8; }
+    .bio-container p { margin-bottom: 1rem; }
+
+    /* Google Form Embed Container */
+    .form-embed-wrapper { background: var(--white); padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center; }
+    .responsive-iframe-container { position: relative; overflow: hidden; width: 100%; padding-top: 120%; /* Controls height aspect ratio for forms */ }
+    .responsive-iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+
+    .responsive-image 
+    {
+        max-width: 100%;
+        height: auto;
+    }
+    /* Footer & Disclaimer */
+    footer { background: var(--dark); color: #94a3b8; padding: 3rem 1.5rem 1.5rem 1.5rem; text-align: center; font-size: 0.9rem; }
+    .disclaimer-box { border: 1px solid #475569; padding: 1rem; max-width: 600px; margin: 0 auto 1.5rem auto; color: var(--white); font-weight: bold; font-size: 0.85rem; }
+    .contact-info { margin-bottom: 1.5rem; }
+    
+   /* Zelle Contribution Box */
+.zelle-card {
+  background: var(--white);
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  color: var(--dark);
+  text-align: center;
+}
+
+.zelle-card h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.zelle-qr-img {
+  width: 220px;
+  height: auto;
+  margin: 1.25rem 0;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.zelle-handle {
+  background-color: #f1f5f9;
+  color: var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0.5rem 0;
+  border: 1px dashed var(--secondary);
+}
+
+.zelle-compliance-note {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+
+
+
+    /* Logo Link Styling */
+    .logo-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .logo-link:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+
+
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 1rem; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'instant'}); history.pushState('', document.title, window.location.pathname + window.location.search); return false;" class="logo-link">LINDA JIMEIAN</a>
+        <span>City Council, Seat 1 • Indian Harbour Beach</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#pillars">Priorities</a></li>
+        <li><a href="#about">About Linda</a></li>
+        <li><a href="#get-involved">Get Involved</a></li>
+        <li><a href="#contribute" class="btn-donate">Contribute</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero" style="max-width: 100%;">
+    <div class="hero-container">
+      
+      <!-- Top Row: Headshot aligned left with header text; Yard Sign aligned right -->
+      <div class="hero-top-row">
+        <img src="images/linda-headshot.jpg" alt="Linda Jimeian" class="hero-headshot">
+        <img src="images/linda yard sign logo chopped.png" alt="Linda Jimeian City Council Yard Sign" class="hero-yard-sign">
+      </div>
+
+      <!-- Main Banner Text & Buttons -->
+      <div class="hero-content">
+        <h1>Strong Leadership. Fiscal Responsibility. Protecting Our Future.</h1>
+        <p class="subtitle">A dedicated leader working to keep Indian Harbour Beach safe, vibrant, and thriving for all residents.</p>
+
+        <div class="hero-buttons">
+            <a href="#contribute" class="btn-primary">Contribute Today</a>
+            <a href="#get-involved" class="btn-secondary">Request a Yard Sign</a>
+        </div>
+
+
+
+    
+    </div>
+
+    </div>
+  </section>
+
+  <!-- Priority Pillars -->
+  <section id="pillars">
+    <h2 class="section-title">Key Campaign Priorities</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <h3>🏛️ Smart & Responsible Growth</h3>
+        <p>Guiding thoughtful development while protecting the unique coastal character of Indian Harbour Beach. Leveraging experience on the Planning & Zoning Board to prepare for the future while respecting our roots.</p>
+      </div>
+      <div class="pillar-card">
+        <h3>📊 Fiscal Responsibility & Transparency</h3>
+        <p>Ensuring transparent decision-making and efficient stewardship of taxpayer dollars. Effective leadership begins with listening and putting residents' voices first.</p>
+      </div>
+      <div class="pillar-card">
+        <h3>🛡️ Public Safety & Community Quality</h3>
+        <p>Building a safe, vibrant, and resilient community. Committed to supporting public safety, protecting local parks, and strengthening programs that support neighborhood stability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Linda Bio Section -->
+  <section id="about">
+    <h2 class="section-title">Meet Linda Jimeian</h2>
+    <div class="bio-container">
+      <p><strong>Linda Jimeian</strong> is a dedicated community leader with a passion for public service and building strong, connected communities. Throughout her career, she has worked across the nonprofit, business, and public sectors, bringing people together to solve problems, build partnerships, and improve the lives of others.</p>
+      <p>Linda's professional experience includes community engagement, workforce development, business development, fundraising, marketing, and case management. She has collaborated with local businesses, government agencies, faith-based organizations, and community partners to develop innovative solutions, secure resources, and strengthen community programs. Her work has focused on helping individuals and families achieve stability while supporting initiatives that enhance the quality of life for the entire community.</p>
+      <p>Committed to servant leadership, Linda currently serves on the <strong>Planning and Zoning Board</strong>, where she works to promote thoughtful growth, responsible planning, and decisions that protect the character of the community while preparing for its future.</p>
+      <p>Linda believes effective leadership begins with listening. She is committed to transparency, fiscal responsibility, public safety, and supporting local businesses while ensuring residents have a strong voice in the decisions that shape their city.</p>
+      <p>Linda is honored to seek the opportunity to serve on the City Council and is dedicated to working collaboratively to build a safe, vibrant, and thriving community for all residents.</p>
+    </div>
+  </section>
+
+<!-- Get Involved / Request Section -->
+  <section id="get-involved">
+    <h2 class="section-title">Request a Yard Sign or Get Involved</h2>
+    <div style="background: var(--white); padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center; max-width: 700px; margin: 0 auto; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--dark);">
+        Show your support in Indian Harbour Beach! Reach out to us directly via text message or email to request a yard sign or let us know how you'd like to volunteer.
+      </p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+        <a href="sms:+13215911509?body=Hi%20Linda%2C%20I%20would%20like%20to%20request%20a%20yard%20sign%20for%20my%20property.%20My%20address%20is%3A" class="btn-sms" style="font-size: 1.1rem; padding: 0.85rem 1.5rem;">
+          📱 Text (321) 591-1509
+        </a>
+        <a href="mailto:ljimeian@yahoo.com?subject=Yard%20Sign%20Request%20-%20Linda%20Jimeian%20Campaign&body=Hi%20Linda%2C%0A%0AI%20would%20like%20to%20request%20a%20yard%20sign%20for%20my%20property.%0A%0AName%3A%0AAddress%3A%0APhone%3A" class="btn-email" style="font-size: 1.1rem; padding: 0.85rem 1.5rem;">
+          ✉️ Email ljimeian@yahoo.com
+        </a>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--gray);">
+        Please include your <strong>Name</strong> and <strong>Street Address</strong> in Indian Harbour Beach so we can deliver your sign.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Contribute via Zelle Section -->
+<section id="contribute">
+  <h2 class="section-title">Support the Campaign</h2>
+  
+  <div class="zelle-card">
+    <h3>Contribute via Zelle®</h3>
+    <p style="font-size: 1rem; margin-top: 0.5rem; color: var(--dark);">
+      You can search Zelle for <br>
+      <span class="zelle-handle">jimeian-campaign</span><br> 
+      to contribute to the <strong>Linda Jimeian campaign</strong>, or scan the QR code in your Zelle app:
+    </p>
+    
+    <!-- Zelle QR Code Image -->
+    <img src="images/zelle-qr.png" alt="Zelle QR Code - Linda Jimeian Campaign" class="zelle-qr-img">
+
+    <p class="zelle-compliance-note">
+      <strong>FL Election Law Note:</strong> Please include your full street address in the Zelle memo/note field so our treasurer can log your contribution.
+    </p>
+  </div>
+</section>
+
+  <!-- Footer with Legal Disclaimer -->
+  <footer>
+    <div class="contact-info">
+      <!-- PLACEHOLDER: Update Campaign Contact Info -->
+      <p><strong>Linda Jimeian Campaign</strong></p>
+      <p>Email: <a href="mailto:ljimeian@yahoo.com" style="color: var(--secondary);">ljimeian@yahoo.com</a></p>
+      <p>Indian Harbour Beach, Florida</p>
+    </div>
+
+    <!-- Required Florida Political Disclaimer -->
+    <div class="disclaimer-box">
+      Political advertisement paid for and approved by Linda Jimeian, Non-Partisan, for City Council Seat 1, Indian Harbour Beach.
+    </div>
+
+    <p>&copy; 2026 Official Campaign Website of Linda Jimeian. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
